@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:local="clr-namespace:ExtraTask1"
+             x:Class="ExtraTask1.MainPage">
+
+    <StackLayout>
+        <Label Text="HeLlO, wOrLd!"
+               VerticalOptions="Center"
+               HorizontalOptions="Center"
+               FontSize="24"
+               TextColor="{local:ARGBColor Alpha=255, Red=0, Green=77, Blue=64}"
+               BackgroundColor="{local:ARGBColor Alpha=255, Red=128, Green=203, Blue=196}"/>
+        <ListView ItemsSource="{Binding allcolors}"
+                  SelectionMode="None">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Label Text="{Binding NameColor}"
+                               TextColor="{Binding NameColor}"
+                               FontSize="Medium"
+                               HorizontalOptions="CenterAndExpand"/>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+
+</ContentPage>
